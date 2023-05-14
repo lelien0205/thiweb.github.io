@@ -1,0 +1,385 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(235, 235, 235);
+
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+
+/*header*/
+.header{
+    width: 100%;
+    height: 8.3rem;
+
+    position: relative;
+    z-index: 5;
+}
+.header::before{
+    content: '';
+
+    background-color: rgb(101, 120, 173);
+
+    width: 100%;
+    height: 8.3rem;
+    z-index: 1;
+
+    position: absolute;
+}
+.header a{
+    display: block;
+}
+
+.header .content{
+    width: 100%;
+
+    position: absolute;
+    z-index: 2;
+}
+    
+    /*logo*/
+.header .content .logo{
+    margin-top: .3rem;
+    width: 100%;
+    height: 5rem;
+    background-color: azure;
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    /*left*/
+.left{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header .content .logo .itcIcon{
+    height: 100%;
+
+}
+.header .content .logo .itcIcon img{
+    height:100%;
+}
+.header .content .logo .text{
+    font-weight: bolder;
+    font-size: 2rem;
+    color: rgb(31, 31, 31);
+
+    text-align: center;
+}
+
+    /*right*/
+.right{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.right img{
+    height: 100%;
+}
+
+
+
+    /*menu*/  
+.fixed{
+    background-color: rgb(101, 120, 173);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header .content #menu{
+    width: 100%;
+    height: 3rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header .content #menu > a,.header .content #menu > div:not(.search){
+    flex: 1;
+    width:100%;
+    height:100%;
+    padding: .9rem 0;
+    text-align: center;
+    color: rgb(31, 31, 31);
+}
+.header .content #menu div.search{
+    flex: 1;
+    width:100%;
+    height:100%;
+    text-align: center;
+    color: rgb(31, 31, 31);
+}
+.header .content #menu > a:last-child{
+    border-right: none;
+}
+
+    /*dropdown*/
+.header .content #menu > div{
+    position: relative;
+}
+.header .content #menu .more{
+    width: 100%;
+    
+    background: azure;
+    color: rgb(31, 31, 31);
+
+    position: absolute;
+    left:0;
+    top:100%;
+    z-index: 3;
+
+    display: none;
+}
+.header .content #menu .more a{
+    width: 100%;
+    height: 100%;
+    padding: .9rem 0;
+    text-align: center;
+}
+
+    /*hover dropdown*/
+.header .content #menu > div:hover{
+    color: rgb(102, 94, 21);
+}
+.header .content #menu > a:hover{
+    color: rgb(102, 94, 21);
+}
+
+.header .content #menu div:hover .more{
+    display: block;
+}
+.header .content #menu .more > a:hover{
+    font-weight: bold;
+    
+}
+
+    /*search*/
+.on{
+    display: block;
+}
+.off{
+    display: none;
+}
+
+.header .content #menu .search .textSearch{
+    width:100%;
+    height:100%;
+    padding: .9rem 0;
+    text-align: center;
+    color: rgb(31, 31, 31);
+}
+.header .content #menu .search .textSearch:hover{
+    color: rgb(102, 94, 21);
+}
+
+.header .content #menu .search form{
+    width: 231%;
+    height: 125%;
+    background: rgb(126, 126, 126);
+    color: rgb(31, 31, 31);
+    padding: .6rem 0;
+
+    position: absolute;
+    left:-31%;
+    top:100%;
+    z-index: 2;
+}
+.header .content #menu .search form input{
+    width: 70%;
+    padding: 10px;
+    border: none;
+}
+.header .content #menu .search form button#submit{
+    width: 17%;
+    border: none;
+    background-color: azure;
+    padding: 10px;
+}
+.header .content #menu .search form button#submit::before{
+    content: '\f002';
+    font: var(--fa-font-solid);
+}
+.header .content #menu .search form button#submit:active{
+    background: grey;
+}
+
+/*up to header*/
+#upToHeader{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid rgb(31, 31, 31);
+
+    background-color: unset;
+    position: fixed;
+    bottom: 7.5%;
+    right: 2.5%;
+
+    transition: background-color linear .3s;
+}
+#upToHeader:hover{
+    background-color: rgb(126, 126, 126);
+}
+
+#upToHeader::before{
+    content: '\f106';
+    font: var(--fa-font-solid);
+    font-size: 40px;
+}
+#upToHeader > p{
+    width: 300%;
+    padding: 5px 2px;
+    font-size: 1rem;
+
+    background-color: azure;
+
+    position: absolute;
+    left: -100%;
+    top: -150%;
+
+    opacity: 0;
+    transition: opacity linear .3s;
+
+    animation: chuyenDong linear 3s infinite;
+}
+#upToHeader:hover p{
+    opacity: 1;
+}
+
+@keyframes chuyenDong {
+    0%{
+        top: -110%;
+    }
+    50%{
+        top: -90%;
+    }
+    100%{
+        top: -110%;
+    }
+}
+
+/*footer*/
+.footer{
+    padding-top: 3rem;
+    background-color: rgb(101, 120, 173);
+    color: rgb(31, 31, 31);
+
+    display: grid;
+    grid-template-rows: 4fr 8fr .1fr;
+    grid-template-columns: 6fr 4fr 3fr;
+    row-gap: 10px;
+    column-gap: 3rem;
+}
+.footer h3, .footer p, .footer span{
+    margin-top: 10px;
+}
+.footer .intro{
+    grid-row: 1/ span2;
+}
+.footer .album{
+    grid-row: 1/ span2;
+}
+.footer h3{
+    color: azure;
+    padding-bottom: 5px;
+}
+.footer p:not(p:nth-child(2)), .footer span, .footer > div > div > p{
+    margin-left: 7%;
+    font-size: 13px;
+    display: block;
+}
+
+    /*intro*/
+.intro{
+    padding-left: 2%;
+}
+
+.intro div:nth-child(3)::before{
+    content: '\f3c5';
+    font: var(--fa-font-solid);
+    color: azure;
+
+    font-size: 1rem;
+    position: absolute;
+    left: 1.8%;
+}
+.intro p:nth-child(4)::before{
+    content: '\f3ce';
+    font: var(--fa-font-solid);
+    color: azure;
+
+    font-size: 1rem;
+    position: absolute;
+    left: 1.8%;
+}
+.intro p:nth-child(5)::before{
+    content: '\f2b6';
+    font: var(--fa-font-solid);
+    color: azure;
+
+    font-size: 1rem;
+    position: absolute;
+    left: 1.7%;
+}
+.intro p:nth-child(6)::before{
+    content: '\f15b';
+    font: var(--fa-font-solid);
+    color: azure;
+
+    font-size: 1rem;
+    position: absolute;
+    left: 1.8%;
+
+}
+.intro > p:last-child::before{
+    content: '\f075';
+    font: var(--fa-font-solid);
+    color: azure;
+
+    font-size: 1rem;
+    position: absolute;
+    left: 1.7%;
+}
+
+    /*album*/
+.album .albumImage{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+.albumImage img{
+    border-radius: 10px;
+}
+    /*contact*/
+.contactIcon{
+    color: rgb(165,221,250);
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+    /*website*/
+.website{
+    height: 8em;
+    display: flex;
+    flex-direction: row;
+}
+.website a{
+    height: 100%;
+}
+.website a img{
+    height: 100%;
+}
+    /*last*/

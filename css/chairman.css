@@ -1,0 +1,38 @@
+@media only screen and (min-width: 741px) {   
+    .banchunhiem{
+        margin: auto;
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .banchunhiem > div{
+        margin: 0 20px;
+        width: 30%;
+        font-size: 16px;
+        text-align: center;
+    }
+    .banchunhiem > .nguoi1{
+        flex: 1;
+        font-size: 20px;
+    }
+}
+
+    .clb{
+        width: 12em;
+        height: 12em;
+        object-fit: cover;
+    }
+    .clbText{
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: justify;
+    }
+    #clbTextProperty{
+        font-weight: bold;
+        font-style: italic;
+    }
+    /* ------------------------------------------------------------- */

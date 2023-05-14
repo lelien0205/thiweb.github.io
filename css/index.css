@@ -1,0 +1,343 @@
+.main-gioithieu {
+    background: #f3f3f3;
+    padding: 15px 0;
+}
+.gioithieu-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gioithieu{
+    display: block;
+    text-align:center;
+}
+.icon{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.flex-wrap {
+    display: flex;
+    /* flex-wrap: wrap;  */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.row {
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.col-xs-6 {
+    width: 50%;
+    float: left; 
+}
+
+.col-md-3, .col-sm-6, .col-xs-6 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.icon-gt {
+    margin-bottom: 15px;
+}
+.center {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ---------------------------------------------------------- */
+
+.section-title{
+    display: flex;
+    flex-direction: row;
+    font-size: 50px;
+    padding-bottom: 2.8rem;
+    padding-top: 1.9rem;
+}
+
+.hinhcn{
+    width: 3px;
+    height: 1em;
+    background: green;
+
+}
+
+h2{
+    word-spacing: 10px;
+}
+
+.introduct{
+    width: 100%;
+    height: 40rem;
+    padding: 0 5%;
+
+    overflow: hidden;
+}
+
+.section-title{
+    margin-left: 5%;
+}
+
+.introFlex{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.phai > img{
+    width: 800px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.trai{
+    flex: 1;
+    line-height: 30px;
+}
+
+.phai{
+    flex: 1;
+    padding-left: 2.5rem;
+} 
+
+/* ---------------------------------------------------------- */
+
+
+/* resposive */
+@media only screen and (max-width: 1023px) {
+    .header .right{
+        display: none;
+    }
+    .body{
+        width: 100%;
+    }
+    .outstanding{
+        display: none;
+    }
+    .body .banner .one{
+        width: 55%;
+    }
+    .body .banner .two{
+        left: 30%;
+    }
+    .body .banner .slide-wrapper .bannerText{
+        width: 25%;
+
+    
+        font-family: myFond;
+        font-size: 38px;
+        font-weight: bold;
+        color: rgb(255, 226, 61);
+
+        position: absolute;
+        left: 2.5%;
+        bottom: 5%;
+        z-index: 2;
+    }
+    .introduct{
+        height: 38rem;
+    }
+    .introduct .trai p:nth-child(2){
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    .svutText span:nth-child(8),.svutText  span:last-child{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 740px) {
+    .body{
+        width: 100%;
+    }
+    .outstanding{
+        display: none;
+    }
+
+    /* header */
+    .header #menu{
+        font-size: 13px;
+    }
+    /* title */
+    .section-title{
+        font-size: 30px;
+    }
+
+    /* banner */
+    .body .banner .one{
+        width: 60%;
+    }
+    .body .banner .slide-wrapper .bannerText{
+        width: 30%;
+
+    
+        font-family: myFond;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 226, 61);
+
+        position: absolute;
+        left: 2.5%;
+        bottom: 5%;
+        z-index: 2;
+    }
+
+    /* introduct */
+    .introduct .introFlex{
+        flex-direction: column;
+    }
+    .introduct .trai p:first-child{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    .introduct .trai p:nth-child(2){
+        display: none;
+    }
+
+    /* chairman */
+    .banchunhiem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banchunhiem .nguoi1{
+        order: -1;
+    }
+    .banchunhiem > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* excellence */
+    .svutGrid{
+        height: 300px;
+    }
+    .slider{
+        overflow: hidden ;
+        border-radius: inherit;
+        grid-column: 1/span 2;
+        grid-row: 1/span 3;
+        /* padding-top: 40px; */
+        position: relative;
+    }
+    .slider__imgs img{
+        height: 300px;
+    }
+    .svutText {
+        display: none;
+    }
+    #img1:checked ~.slider .slider__imgs{
+        top:0px;
+    }
+    #img1:checked ~.svutText .ThanhDat{
+        display: block;
+    }
+    
+    #img2:checked ~.slider .slider__imgs{
+        top:-300px;
+    }
+    #img2:checked ~.svutText .ThuyNga{
+        display: block;
+    }
+    
+     #img3:checked ~.slider .slider__imgs{
+        top:-600px;
+    } 
+    #img3:checked ~.svutText .AnhTuan{
+        display: block;
+    }
+    
+     #img4:checked ~.slider .slider__imgs{
+        top:-900px;
+    } 
+    #img4:checked ~.svutText .ThiLan{
+        display: block;
+    }
+    #img2:checked ~.svutText .ThanhDat, #img3:checked ~.svutText .ThanhDat, #img4:checked ~.svutText .ThanhDat{
+        display: none;
+    }
+
+    /*program*/
+    .layout2{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 140px 45px 140px;
+        grid-gap: 10px;
+    }
+
+    /* button */
+    #upToHeader{
+        width: 2rem;
+        height: 2rem;
+    }
+    #upToHeader::before{
+        font-size: 25px;
+    }
+    #upToHeader > p{
+        font-size: .7rem;
+        top: -300%;
+    }
+    /* footer */
+    .footer{
+        padding: 1rem 1% .3rem 1%;
+        display: grid;
+        grid-template-rows: 3fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+    .footer h3{
+        font-size: 16.5px;
+    }
+    .footer .intro{
+        grid-column: 1/ 2;
+        grid-row: 1/ span 3;
+    }
+    .footer .album{
+        grid-column: 2/span 1;
+        grid-row: 1/ span 1;
+    }
+    .album .albumImage img:nth-child(3), .album .albumImage img:last-child{
+        display: none;
+    }
+    .footer .contact{
+        grid-column: 2/ span 1;
+        grid-row: 2/ span 1;
+    }
+    .footer .related{
+        grid-column: 2/ span 1;
+        grid-row: 3/ span 1;
+
+        display: flex;
+        flex-direction: row;
+    }
+    .website{
+        height: 5rem;
+    }
+}

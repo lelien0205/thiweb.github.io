@@ -1,0 +1,143 @@
+
+
+/* .mon{
+    padding-left: 20px;
+}
+
+.noibat{
+    padding-left: 30px;
+} */
+
+/* --------------------------------------------------------------------------------------------------- */
+
+.svutGrid{
+    padding: 10px;
+    width: 100%;
+    
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: auto;
+    gap: 30px;
+    position: relative;
+    isolation: isolate;
+}
+@media only screen and (min-width: 1024px) {
+    .svutGrid{
+        height: 500px;
+    }
+}
+.svutGrid::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('https://i.pinimg.com/736x/c2/e9/02/c2e902e031e1d9d932411dd0b8ab5eef.jpg');
+    background-size: cover;
+
+    opacity: .1;
+    position: absolute;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 741px) {
+    .slider{
+        overflow: hidden ;
+        border-radius: inherit;
+        grid-column: 1/span 1;
+        grid-row: 1/2;
+        /* padding-top: 40px; */
+        position: relative;
+    }
+    .slider__imgs img{
+        height: 550px;
+    }
+    #img1:checked ~.slider .slider__imgs{
+        top:0px;
+    }
+    #img1:checked ~.svutText .ThanhDat{
+        display: block;
+    }
+    
+    #img2:checked ~.slider .slider__imgs{
+        top:-550px;
+    }
+    #img2:checked ~.svutText .ThuyNga{
+        display: block;
+    }
+    
+     #img3:checked ~.slider .slider__imgs{
+        top:-1100px;
+    } 
+    #img3:checked ~.svutText .AnhTuan{
+        display: block;
+    }
+    
+     #img4:checked ~.slider .slider__imgs{
+        top:-1650px;
+    } 
+    #img4:checked ~.svutText .ThiLan{
+        display: block;
+    }
+    #img2:checked ~.svutText .ThanhDat, #img3:checked ~.svutText .ThanhDat, #img4:checked ~.svutText .ThanhDat{
+        display: none;
+    }
+}
+
+.sinhvienuutu input{
+    display: none;
+}
+
+.slider__imgs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: slide2 30s step-end infinite;
+
+    position: absolute;
+
+}
+
+.slider__imgs img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.lableslider{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom:1%;
+    left: 45%;
+}
+
+.lableslider label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid red;
+    margin: 2px;
+}
+
+.lableslider label:hover{
+    background: blue;
+}
+
+
+.svutText{
+    vertical-align: middle;
+    grid-column: 2/ span 1;
+
+    padding-top: 5rem;
+
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+.svutText h2{
+    text-align: center;
+}
+.svutText .ThuyNga, .AnhTuan, .ThiLan{
+    display: none;
+}

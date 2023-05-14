@@ -1,0 +1,28 @@
+
+.hoatdong{
+    display: flex;
+    flex-direction: column;
+}
+
+.cuocthi, .thethao, .thanhtich{
+    margin: 10px 0;
+    height: 200px;
+    
+    background-color: rgba(103, 46, 236, 0.212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hoatdong .content{
+    padding-top: 50px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hoatdong .thi, .mon, .noibat{
+    padding: 0 3%;
+    text-align: center;
+}
